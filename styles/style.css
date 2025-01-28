@@ -20,11 +20,11 @@
 	list-style: circle;
 }
 
-.nav_list_decoration {
+.nav_link_no-decoration {
 	text-decoration: none;
 }
 
-.nav_no_list-style {
+.nav_no-list-style {
 	list-style-type: none;
 }
 
