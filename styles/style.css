@@ -7,10 +7,10 @@
 	padding: 92px 50px 92px 50px;
 }
 
-.header_text {
+.info-text {
 	font-size: 18px;
 	font-weight: 400;
-	/* Повторяющийся текст в заголовке */
+	/* Текст для навигации и адреса  */
 }
 
 .nav_list {
@@ -18,22 +18,21 @@
 	justify-content: start;
 	gap: 32px;
 	list-style: circle;
+    text-transform: lowercase;
 }
 
-.nav_link_no-decoration {
-	text-decoration: none;
-}
-
-.nav_no-list-style {
-	list-style-type: none;
-}
-
-.link_underline_style {
-	text-decoration-style: solid;
+.header_link {
+    text-decoration-style: solid;
 	text-decoration-thickness: 1px;
 	text-underline-position: under;
 	text-decoration: underline;
-	/* добавил отдельно такое подчеркивание, поскольку изначально ссылки с прерывистом подчеркиванием */
+}
+.header_link_no-underline {
+    text-decoration: none;
+}
+
+.nav_list_no-bullit {
+	list-style-type: none;
 }
 
 .logo {
@@ -46,6 +45,7 @@
 	flex-direction: column;
 	font-style: unset;
 	line-height: 24px;
+    
 }
 
 .address_position_end {
@@ -135,8 +135,6 @@
 /* Раздел лоты */
 .lots {
 	margin: 180px 24px 0px 24px;
-	display: flex;
-	flex-direction: column;
 }
 
 .main_text {
@@ -172,7 +170,6 @@
 }
 
 .lots_card_text {
-	min-width: 254px;
 	color: white;
 	line-height: 24px;
 	position: relative;
@@ -181,27 +178,29 @@
 
 .lots_card_list {
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
 	gap: 20px;
 	list-style: none;
 }
 
 .lots_card_list_item {
 	padding: 48px 40px;
+    max-width: 334px;
 	min-height: 596px;
 	position: relative;
 	z-index: 1;
 }
 
-.lots_card_list li:nth-child(1) {
+.card_type_film {
 	background-image: url(../images/card-lot-01.jpg);
 }
 
-.lots_card_list li:nth-child(2) {
+.card_type_book {
 	background-image: url(../images/card-lot-02.jpg);
 }
 
-.lots_card_list li:nth-child(3) {
+.card_type_picture {
 	background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -211,8 +210,9 @@
 }
 
 .lots_look-more-link {
+    display: block;
 	width: 100%;
-	padding: 32px 0 0 40px;
+	margin: 32px 0 0 40px;
 	line-height: 24px;
 }
 
@@ -260,7 +260,9 @@
 .footer {
 	display: flex;
 	justify-content: space-between;
-    margin: 180px 50px 0 50px;
+    min-height: 180px;
+    margin-top: 180px;
+    padding: 0 50px;
 }
 
 .footer_nav_list {
@@ -268,6 +270,7 @@
 	flex-direction: column;
 	align-items: center;
 	list-style: none;
+    margin-bottom: 115px;
 }
 
 .footer_icons {
@@ -276,9 +279,7 @@
 	gap: 48px;
 }
 
-.footer_icons li:nth-child(1),
-.footer_icons li:nth-child(2),
-.footer_icons li:nth-child(3) {
+.footer_icons li {
 	list-style: none;
 }
 
